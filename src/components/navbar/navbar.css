@@ -1,0 +1,15 @@
+.navbar {
+  @apply flex justify-between items-center bg-transparent p-5 h-[100px] overflow-hidden;
+}
+
+.navbar__nav-brand {
+  @apply flex items-center font-bold overflow-hidden;
+}
+
+.search__search-input {
+  @apply flex;
+}
+
+.search__button {
+  @apply hidden md:block;
+}

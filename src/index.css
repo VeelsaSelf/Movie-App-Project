@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+body {
+  @apply bg-primary text-white;
+}
+
+::-webkit-scrollbar {
+  @apply w-[8px];
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-lg;
+}
+
+.app {
+  display: block;
+  background-position: center;
+}
+
+.app .app__app-navbar {
+  @apply p-0;
+}
+
+.app .app__app-content {
+  @apply m-5;
+}
+
+.movie__detail-content {
+  @apply flex flex-col lg:h-screen md:justify-center py-5 px-10 md:p-10 bg-gradient-to-t lg:bg-gradient-to-r from-slate-950 to-transparent;
+}
+
+.movie__detail-img {
+  @apply block rounded-lg lg:rounded-none lg:absolute -z-10 h-full w-full object-cover;
+}
+
+.movie__detail-genres {
+  @apply flex flex-row divide-x justify-center md:max-lg:justify-start xl:justify-start text-center my-2 sm:my-4;
+}
+
+.movie__genre {
+  @apply font-semibold first:pr-2 xl:first:pr-5 [&:not(:first-child)]:px-2 2xl:[&:not(:first-child)]:px-5 text-sm md:text-base;
+}
+
+.card__card-list {
+  @apply overflow-x-auto overflow-y-hidden flex flex-nowrap items-center gap-4 scroll-smooth py-5;
+}
+
+.card {
+  @apply relative flex justify-center min-w-max overflow-x-hidden transition-all duration-300 hover:scale-105 hover:z-10;
+}
+
+.scrollbar__hidden::-webkit-scrollbar {
+  width: 0;
+}
+
+.scrollbar__hidden::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar__hidden::-webkit-scrollbar-thumb {
+  background: transparent;
+}
